@@ -1,0 +1,52 @@
+{% extends "template.html" %}
+{% block conteudo %}
+        </div>
+
+        <h2> treino A</h2>
+        <table class="table table-striped table-responsive table-bordered">
+            <thead class="thead-default">
+                <tr>
+                    <th>Exercicio</th>
+                    <th>Séries</th>
+                    <th>Repetições</th>
+                    <th>Carga</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for a in treino %}
+
+                    {% if a.ex1 != ' ' %}
+                    <tr>
+                        <td>{{ a.ex1 }}</td>
+                        <td>{{ a.serie1 }}</td>
+                        <td>{{ a.rep1 }}</td>
+                        <td>{{ a.carga1 }}</td>
+                    </tr>
+                    {% endif %}
+
+                    {% if a.ex2 != ' ' %}
+                    <tr>
+                        <td>{{ a.ex2 }}</td>
+                        <td>{{ a.serie2 }}</td>
+                        <td>{{ a.rep2 }}</td>
+                        <td>{{ a.carga2 }}</td>
+                    </tr>
+                    {% endif %}
+
+                    {% if a.ex3 != ' ' %}
+                    <tr>
+                        <td>{{ a.ex3 }}</td>
+                        <td>{{ a.serie3 }}</td>
+                        <td>{{ a.rep3 }}</td>
+                        <td>{{ a.carga3 }}</td>
+                    </tr>
+                    {% endif %}
+
+                {% endfor %}
+
+            </tbody>
+
+        </table>
+
+{% endblock %}

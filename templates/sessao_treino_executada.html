@@ -1,0 +1,12 @@
+{% extends "template.html" %}
+{% block conteudo %}
+            <form action="{{ url_for('treino') }}" method="post" >
+
+                <p><label>Nome de usuário:</label> <input class="form-control" type="text" name="usuario" required></p>
+                <p><label>Exercicio:</label> <input class="form-control" type="text" name="exercicio" required></p>
+                <p><label>Séries:</label> <input class="form-control" type="number" name="series" required></p>
+                <p><label>Repetições:</label> <input class="form-control" type="number" name="repeticoes" required></p>
+                <p><label>Carga:</label> <input class="form-control" type="number" step="0.01" name="carga" required></p>
+                <p><button class="btn btn-primary" type="submit">Entrar</button></p>
+        </form>
+{% endblock %}
