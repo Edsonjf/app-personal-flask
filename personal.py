@@ -160,8 +160,8 @@ def meus_treinos():
     if usuario in Treinos.values():
         flash('Usuário tem treinos disponíveis')
 
-    dados = open('dados.json', 'r', encoding='utf-8').read()
-    treino = dados
+
+    treino = exercicios
     return render_template('/meus_treinos.html', treino=treino)
 
 
