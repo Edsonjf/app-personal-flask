@@ -147,7 +147,7 @@ def index():
     #dados pessoais
 
 
-    return render_template('lista.html', titulo='Aluno', alunos=lista, usuario=usuario, dados=dados)
+    return render_template('index.html', titulo='Aluno', alunos=lista, usuario=usuario, dados=dados)
 
 @app.route('/registro-treino')
 def sessao():
